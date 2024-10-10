@@ -1,0 +1,323 @@
+<html xmlns:th="http://www.thymleaf.org">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <title>Home</title>
+        <style>
+            body{
+                background-color:rgb(7, 21, 31);
+                margin: 0;
+                color: rgb(212, 226, 222);
+                font-family: system-ui;
+            }
+            a{
+                text-decoration: none;
+                color: rgb(189, 207, 202);
+            }
+            .home-top
+            {
+                background-color:rgb(14, 40, 58);
+                width:100%;
+                height: 50px;
+                display: flex;
+            }
+            .home-top-logo
+            {
+                width: 70%;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .home-top-login
+            {
+                width: 10%;
+                margin-top: 10px;
+                text-align:right;
+            }
+            .home-top-login:hover
+            {
+                font-size: 20px;
+
+            }
+            .home-top-logout
+            {
+                width: 15%;
+                margin-top: 10px;
+                text-align: right;
+            }
+            .home-top-logout:hover
+            {
+                font-size: 20px;
+
+            }
+            .nav
+            {
+                border-radius: 25px;
+                border: 2px solid #274b68;
+                margin-top: 5;
+                display: flex;
+                width: 75%;
+
+                height: 50px;
+                justify-content: center;
+                margin-left: 10%;
+            }
+            .nav:hover{
+                background-color: #283b4b;
+            }
+            .nav-home
+            {
+                margin-top: 10;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .nav-home a:hover
+            {
+                text-decoration: underline;
+            }
+            .carousel-indicators img{
+                width: 5px;
+                border-radius:50px;
+                display: block;
+            }
+            .carousel-indicators button{
+                width: max-content!important;
+            }
+            .carousel-indicators{
+                position: unset;
+            }
+            #carouselDemo
+            {
+                margin-left: 120px;
+                width: 80%;
+                margin-top: 5;
+                border-radius:50px;
+                height: 300px;
+            }
+            .carousel-item
+            {
+                border-radius:50px;
+            }
+            .carousel-item img{
+                border-radius:50px;
+                height: 300px;
+                object-fit: cover;
+
+            }
+            /*latest*/
+            .music
+            {
+                margin-top: 50px;
+                margin-left: 120px;
+                width: 1200px;
+                font-family: system-ui;
+                color: #d0dada;
+            }
+            .music-title 
+            {
+                margin-left: 70px;
+                font-size: 200px;
+            }
+            .s{
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .s:hover
+            {
+                text-decoration: underline;
+            }
+            .s::first-letter{
+                color: #3ac2c2;
+            }
+            .more a
+            {
+                margin-top: 20px;
+                position: absolute;
+                right: 200;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .more:hover a{
+                text-decoration: underline;
+                font-size: 22px;
+            }
+            .ab
+            {
+                color: #d0dada;
+            }
+            .down
+            {
+                display:ruby;
+            }
+            .down-img
+            {
+                border-radius: 25px;
+                margin-left: 20px;
+            }
+            .down-img-a 
+            {
+                display: flex;
+                border-radius: 25px;
+                height: 150px;
+            }
+            .down-img-a img
+            {
+                border-radius: 25px;
+                height: 150px;
+            }
+            .down-img-a img:hover
+            {
+                border-radius: 15px;
+                height: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="home-top">
+            <div class="home-top-logo">
+                <img src="" alt="logo"/>
+            </div>
+            <div class="home-top-login">
+                <a href="login.html"><i class="bi bi-box-arrow-in-left" style="color:rgb(16, 153, 233);"></i>signin</a>
+            </div>
+            <div class="home-top-logout">
+                
+                <a href="signup.html"><i class="bi bi-box-arrow-right" style="color:rgb(16, 153, 233);"></i>signout</a>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="nav-home">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="nav-home">
+                <a href="favourites.html">Favourites</a>
+            </div>
+            <div class="nav-home">
+                <a href="OldSongs.html">Old Songs</a>
+            </div>
+            <div class="nav-home">
+                <a href="NewSongs.html">New Songs</a>
+            </div>
+            <div class="nav-home">
+                <a href="Search.html">Search</a>
+            </div>
+        </div>
+        <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
+            <div class="carousel-inner">
+        
+                <div class="carousel-item active">
+                <a href="AyudhaPooja">
+                	<img src="https://images.moneycontrol.com/static-mcnews/2024/08/20240827092415_image-2024-08-27T145350.003.jpg" class="w-100">
+                </a>
+                    
+                </div>
+        
+                <div class="carousel-item " 
+                data-bs-interval="2000">
+                <a href="GaramGaram">
+                    <img src="https://survi.in/wp-content/uploads/2024/08/Saripodhaa-Sanivaaram.jpg" class="w-100">
+                </a>
+                </div>
+        
+                <div class="carousel-item ">
+                    <a href="">
+                    <img src="https://img.wynk.in/unsafe/880x307/filters:no_upscale():strip_exif():format(webp)/https://s3.ap-south-1.amazonaws.com/discovery-prod-arsenal/tile/artwork/1723456095203_bollywood-love-cafe-1440x502_(2).png" class="w-100">
+                </div>
+                <div class="carousel-item ">
+                    <a href="">
+                    <img src="https://img.wynk.in/unsafe/880x307/filters:no_upscale():strip_exif():format(webp)/https://s3.ap-south-1.amazonaws.com/discovery-prod-arsenal/arsenal/artworks/66bb5068dd4c63296eb47813/BANNER_419045940747783.jpg" class="w-100">
+                </div>
+                <div class="carousel-item ">
+                    <a href="">
+                    <img src="https://img.wynk.in/unsafe/880x307/filters:no_upscale():strip_exif():format(webp)/https://s3.ap-south-1.amazonaws.com/discovery-prod-arsenal/arsenal/artworks/66c86381e41e1c517137092c/BANNER_11557895698270.png" class="w-100">
+                </div>
+            </div>
+        
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDemo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+        
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDemo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        
+            <div class="carousel-indicators">
+                <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="0">
+                    <img src="img1.jpg" />
+                </button>
+        
+                <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="1">
+                    <img src="img2.jpg" />
+                </button>
+        
+                <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="2">
+                    <img src="img3.jpg" />
+                </button>
+                <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="3">
+                    <img src="img3.jpg" />
+                </button>
+                <button type="button" data-bs-target="#carouselDemo" data-bs-slide-to="4">
+                    <img src="img3.jpg" />
+                </button>
+            </div>
+        
+        </div>
+        <!--latest-->
+        <div class="music">
+            <div clas="music-title" style="display: flex;">
+                <p class="s">Telugu Songs</p>
+                <div class="more">
+                    <a href="" style="text-decoration: inherit;" class="ab">
+                        <p>see all</p>
+                    </a>
+                </div>
+            </div>
+            <div class="down">
+                <div class="down-img" th:each="telugumusic:${telugumusic}">
+                    <a th:href="${telugumusic.pageurl}" th:title="${telugumusic.musicName}" class="down-img-a">
+                        <img th:src="${telugumusic.posterurl}" alt="img"/>
+                    </a>
+                </div>
+                
+            </div> 
+        </div>
+        <div class="music">
+            <div clas="music-title" style="display: flex;">
+                <p class="s">Tamil Songs</p>
+                <div class="more">
+                    <a href="" style="text-decoration: inherit;" class="ab">
+                        <p>see all</p>
+                    </a>
+                </div>
+            </div>
+            <div class="down">
+                <div class="down-img" th:each="tamilmusic:${tamilmusic}">
+                    <a th:href="${tamilmusic.pageurl}" th:title="${tamilmusic.musicName}" class="down-img-a">
+                        <img th:src="${tamilmusic.posterurl}" alt="img"/>
+                    </a>
+                </div>
+                
+            </div> 
+        </div>
+        <div class="music">
+            <div clas="music-title" style="display: flex;">
+                <p class="s">Malayalam Songs</p>
+                <div class="more">
+                    <a href="" style="text-decoration: inherit;" class="ab">
+                        <p>see all</p>
+                    </a>
+                </div>
+            </div>
+            <div class="down">
+                <div class="down-img" th:each="malayalammusic:${malayalammusic}">
+                    <a th:href="${malayalammusic.pageurl}" th:title="${malayalammusic.musicName}" class="down-img-a">
+                        <img th:src="${malayalammusic.posterurl}" alt="img"/>
+                    </a>
+                </div>
+                
+            </div> 
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    </body>
+   
+</html>
